@@ -1,0 +1,18 @@
+<div class="resizeable-panel" #panel>
+  <div class="top" [style.height]="topHeight + 'px'">
+    <ng-content select="[top]"></ng-content>
+  </div>
+  <div
+    class="drag-handle"
+    #dragHandle
+    cdkDrag
+    cdkDragLockAxis="y"
+    cdkDragBoundary=".list-area"
+    (cdkDragMoved)="handleDrag($event)"
+    (cdkDragEnded)="dragEnded($event)"
+  ></div>
+
+  <div class="bottom" [style.height]="remainingHeight">
+    <ng-content select="[bottom]"></ng-content>
+  </div>
+</div>

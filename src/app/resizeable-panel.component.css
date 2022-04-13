@@ -1,0 +1,30 @@
+.resizeable-panel {
+  border: 1px solid green;
+  height: 100%;
+  display: block;
+  flex-direction: column;
+}
+
+.resizeable-panel > *:not(.drag-handle) {
+  flex-grow: 1;
+}
+
+.drag-handle {
+  border: 2px solid;
+  cursor: ns-resize;
+}
+
+.top {
+  background-color: lightpink;
+  height: calc(50% - 4px);
+  display: block;
+}
+.bottom {
+  background-color: lightblue;
+  height: calc(50% - 4px);
+  display: block;
+}
+
+.drag-handle {
+  transform: initial !important;
+}
