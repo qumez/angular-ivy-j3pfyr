@@ -1,3 +1,5 @@
+<button (click)="showBottom = !showBottom">toggle bottom</button>
+
 <div id="mockNav">
   <resizeable-panel>
     <div class="red" top>
@@ -47,7 +49,7 @@
       volutpat odio sagittis, molestie augue. Donec sollicitudin massa vitae
       pretium vestibulum.
     </div>
-    <div class="blue" bottom>
+    <div class="blue" bottom *ngIf="showBottom">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam volutpat
       tellus suscipit, ornare nibh vel, condimentum nibh. Cras varius pulvinar
       tempus. Pellentesque lobortis suscipit sem, quis egestas felis vulputate
