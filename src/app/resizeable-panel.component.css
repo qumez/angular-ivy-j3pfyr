@@ -15,10 +15,18 @@
   height: calc(50% - 4px);
   display: block;
   position: relative;
+  overflow: auto;
+}
+
+.top :first-child {
+  overflow: auto;
 }
 
 .top:only-child {
   min-height: 100% !important;
+}
+.top:only-child .drag-handle {
+  display: none;
 }
 
 .bottom {

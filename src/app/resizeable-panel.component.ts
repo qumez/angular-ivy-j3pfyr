@@ -1,11 +1,18 @@
 import { CdkDragEnd, CdkDragMove } from '@angular/cdk/drag-drop/drag-events';
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  ViewChild,
+  ViewEncapsulation,
+} from '@angular/core';
 import { Subject, Subscription } from 'rxjs';
 
 @Component({
   selector: 'resizeable-panel',
   templateUrl: './resizeable-panel.component.html',
   styleUrls: ['./resizeable-panel.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ResizeablePanelComponent implements AfterViewInit {
   drag$ = new Subject<CdkDragMove>();
