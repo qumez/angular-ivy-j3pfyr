@@ -1,11 +1,6 @@
-import {
-  CdkDragEnd,
-  CdkDragMove,
-  CdkDragStart,
-} from '@angular/cdk/drag-drop/drag-events';
+import { CdkDragEnd, CdkDragMove } from '@angular/cdk/drag-drop/drag-events';
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { auditTime, Subject, Subscription } from 'rxjs';
-import { debounceTime } from 'rxjs/operators';
+import { Subject, Subscription } from 'rxjs';
 
 @Component({
   selector: 'resizeable-panel',

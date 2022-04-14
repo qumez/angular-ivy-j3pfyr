@@ -5,10 +5,6 @@
   flex-direction: column;
 }
 
-.resizeable-panel > *:not(.drag-handle) {
-  flex-grow: 1;
-}
-
 .drag-handle {
   border: 2px solid;
   cursor: ns-resize;
@@ -18,7 +14,13 @@
   background-color: lightpink;
   height: calc(50% - 4px);
   display: block;
+  position: relative;
 }
+
+.top:only-child {
+  min-height: 100% !important;
+}
+
 .bottom {
   background-color: lightblue;
   height: calc(50% - 4px);
@@ -27,4 +29,8 @@
 
 .drag-handle {
   transform: initial !important;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
